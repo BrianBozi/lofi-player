@@ -2,10 +2,20 @@
   border: 1px solid black;
   border-radius: 35px;
   width: 350px;
-  height: 400px;
+  height: 550px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
+}
+
+.screen {
+  border: 1px solid red;
+  border-radius: 12px;
+  height: 250px;
+  width: 300px;
+  position: absolute;
+  top: 5%;
+  left: 7%;
 }
