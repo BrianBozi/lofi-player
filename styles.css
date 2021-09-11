@@ -1,5 +1,33 @@
+body {
+  background: rgb(2,0,36);
+    background: linear-gradient(271deg, #2ecea5, #067c9f, #902ef0, #e60096);
+    background-size: 800% 800%;
+
+    -webkit-animation: AnimationName 23s ease infinite;
+    -moz-animation: AnimationName 23s ease infinite;
+    animation: AnimationName 23s ease infinite;
+/* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,119,1) 0%, rgba(0,212,255,1) 100%); */
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 .case {
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  /* box-shadow: 1px 13px 15px 1px rgba(0, 0, 255, .2); */
+  box-shadow: ;
   border-radius: 35px;
   width: 350px;
   height: 550px;
@@ -11,7 +39,9 @@
 }
 
 .screen {
-  border: 1px solid red;
+  border: 1px solid rgb(194, 194, 194);
+    box-shadow: 1px 15px 15px 1px rgba(0, 0, 0, .9);
+
   border-radius: 12px;
   height: 250px;
   width: 300px;
@@ -21,7 +51,6 @@
 }
 
 .buttons {
-
     position: absolute;
     width: 300px;
     top: 350px;
