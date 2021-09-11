@@ -19,3 +19,13 @@
   top: 5%;
   left: 7%;
 }
+
+.buttons {
+
+    position: absolute;
+    width: 300px;
+    top: 350px;
+    left: 22px;
+    display: flex;
+    justify-content: space-around;
+}
