@@ -21,10 +21,10 @@ const songList = [
 indexNum = 1
 
 window.addEventListener('load', () => {
-  play(indexNum)
+  loadSong(indexNum)
 })
 
-function play (songIndex){
+function loadSong (songIndex){
   albumArt.src = `${songList[indexNum - 1].img}`
 }
 
@@ -40,4 +40,13 @@ pauseBtn.addEventListener('click', function (event) {
   playBtn.className = "play"
   pauseBtn.className = "hidden"
   song.pause()
+})
+
+function nextTrack () {
+  songList++
+  // have to increment by 1
+}
+
+nextBtn.addEventListener("click", () => {
+
 })
