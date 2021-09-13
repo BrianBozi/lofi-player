@@ -33,13 +33,17 @@ function loadSong (indexNum){
   albumArt.src = `${songList[indexNum - 1].img}`
 }
 
+function songPlayinng (){
+  song.src = `${songList[indexNum - 1].src}`
+  song.play()
+}
 
 playBtn.addEventListener('click', function (event) {
   playBtn.className = "hidden"
   pauseBtn.className = "pause"
-  song.src = `${songList[indexNum - 1].src}`
-  song.play()
+  songPlayinng()
 })
+
 
 pauseBtn.addEventListener('click', function (event) {
   playBtn.className = "play"
@@ -51,7 +55,7 @@ function nextTrack () {
   indexNum++
   indexNum > songList.length ? indexNum = 1 : indexNum = indexNum
   loadSong(indexNum)
-  // if (indexNum)
+  songPlayinng()
 }
 
 nextBtn.addEventListener("click", () => {
@@ -63,12 +67,7 @@ function prevTrack() {
   indexNum--
   indexNum < 1 ? indexNum = songList.length : indexNum = indexNum
   loadSong(indexNum)
-  // have to increment by 1
-  if( indexNum < 1) {
-    indexNum === songList.length
-  } else {
-    indexNum === indexNum
-  }
+  songPlayinng()
 }
 
 prevBtn.addEventListener("click", () => {
