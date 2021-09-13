@@ -12,29 +12,38 @@ const songList = [
     src: "./music/songs/lofi-mando.mp3"
   },
   {
-    song: "",
+    song: "color-lofi",
     img: "./music/img/colors-minial.jpeg",
     src: "./music/songs/colors-lofi.mp3"
+  },
+  {
+    song: "Rude",
+    img: "./music/img/rude.jpeg",
+    src: "./music/songs/Rude.mp3"
   }
 ]
 
-indexNum = 1
+let indexNum = 1
 
 window.addEventListener('load', () => {
   loadSong(indexNum)
 })
 
-function loadSong (songIndex){
+function loadSong (indexNum){
   albumArt.src = `${songList[indexNum - 1].img}`
 }
 
+function songPlayinng (){
+  song.src = `${songList[indexNum - 1].src}`
+  song.play()
+}
 
 playBtn.addEventListener('click', function (event) {
   playBtn.className = "hidden"
   pauseBtn.className = "pause"
-  song.src = `${songList[indexNum - 1].src}`
-  song.play()
+  songPlayinng()
 })
+
 
 pauseBtn.addEventListener('click', function (event) {
   playBtn.className = "play"
@@ -43,10 +52,25 @@ pauseBtn.addEventListener('click', function (event) {
 })
 
 function nextTrack () {
-  songList++
-  // have to increment by 1
+  indexNum++
+  indexNum > songList.length ? indexNum = 1 : indexNum = indexNum
+  loadSong(indexNum)
+  songPlayinng()
 }
 
 nextBtn.addEventListener("click", () => {
+  console.log("next btn")
+  nextTrack()
+})
 
+function prevTrack() {
+  indexNum--
+  indexNum < 1 ? indexNum = songList.length : indexNum = indexNum
+  loadSong(indexNum)
+  songPlayinng()
+}
+
+prevBtn.addEventListener("click", () => {
+  console.log("next btn")
+  prevTrack()
 })
