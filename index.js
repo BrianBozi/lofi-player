@@ -21,16 +21,34 @@ const songList = [
     src: "colors-lofi.mp3"
   },
   {
+    song: "Ocarina of Time - lofi",
+    artist: "a l e x",
+    img: "LOZ.jpeg",
+    src: "LOZ.mp3"
+  },
+  {
     song: "Rude",
     artist: "Eternal Youth",
     img: "rude.jpeg",
     src: "Rude.mp3"
   },
   {
+    song: "Memories We Made",
+    artist: "No Spirit",
+    img: "mwm.jpeg",
+    src: "mwm.mp3"
+  },
+  {
     song: "Before you go",
     artist: "jhove",
     img: "before-you-go.jpeg",
     src: "before-you-go.mp3"
+  },
+  {
+    song: "kingdom hearts ³",
+    artist: "Cozy",
+    img: "koh2.jpeg",
+    src: "koh2.mp3"
   }
 
 ]
