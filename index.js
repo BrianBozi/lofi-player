@@ -43,10 +43,11 @@ window.addEventListener('load', () => {
 
 function loadSong (indexNum){
   albumArt.src = `./music/img/${songList[indexNum - 1].img}`
+  song.src = `./music/songs/${songList[indexNum - 1].src}`
+
 }
 
 function songPlayinng (){
-  song.src = `./music/songs/${songList[indexNum - 1].src}`
   songName.innerText = `${songList[indexNum - 1].song}`
   artist.innerText = `${songList[indexNum - 1].artist}`
   song.play()
@@ -69,11 +70,14 @@ function nextTrack () {
   indexNum++
   indexNum > songList.length ? indexNum = 1 : indexNum = indexNum
   loadSong(indexNum)
+  playBtn.className = "hidden"
+  pauseBtn.className = "pause"
   songPlayinng()
 }
 
 nextBtn.addEventListener("click", () => {
   console.log("next btn")
+
   nextTrack()
 })
 
