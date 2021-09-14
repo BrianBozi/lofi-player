@@ -4,6 +4,9 @@ Need a little help focusing on studying or work? Say no more! Here is a relaxing
 ## Why?
 While there are other platforms you can use for your lofi needs. Many of them having unncessary distractions. This player is built to be simple and free of distractions.
 
+## Shout-outs
+Shout-out to @alphardex for the original background. Some things needed tweaking to make it work the way I wanted it too but be sure to check him out!
+
 ## Technologies Used
 - HMTL
 - CSS
