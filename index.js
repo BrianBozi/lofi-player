@@ -94,8 +94,6 @@ function nextTrack () {
 }
 
 nextBtn.addEventListener("click", () => {
-  console.log("next btn")
-
   nextTrack()
 })
 
@@ -103,11 +101,12 @@ function prevTrack() {
   indexNum--
   indexNum < 1 ? indexNum = songList.length : indexNum = indexNum
   loadSong(indexNum)
+  playBtn.className = "hidden"
+  pauseBtn.className = "pause"
   songPlayinng()
 }
 
 prevBtn.addEventListener("click", () => {
-  console.log("next btn")
   prevTrack()
 })
 
