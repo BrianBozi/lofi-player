@@ -19,7 +19,7 @@ body {
 .star {
   /* --star-color: var(--primary-color); */
   --star-tail-length: 8em;
-  --star-tail-height: 6px;
+  --star-tail-height: 4px;
   --star-width: calc(var(--star-tail-length) / 6);
   --fall-duration: 1s;
   --tail-fade-duration: var(--fall-duration);
@@ -29,7 +29,7 @@ body {
   width: var(--star-tail-length);
   height: var(--star-tail-height);
   color: var(--star-color);
-  background: linear-gradient(45deg, white, transparent);
+  background: linear-gradient(45deg, rgb(17, 135, 139), transparent);
   border-radius: 50%;
   filter: drop-shadow(0 0 6px currentColor);
   transform: translate3d(104em, 0, 0);
