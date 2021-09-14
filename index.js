@@ -94,8 +94,6 @@ function nextTrack () {
 }
 
 nextBtn.addEventListener("click", () => {
-  console.log("next btn")
-
   nextTrack()
 })
 
@@ -107,7 +105,6 @@ function prevTrack() {
 }
 
 prevBtn.addEventListener("click", () => {
-  console.log("next btn")
   prevTrack()
 })
 

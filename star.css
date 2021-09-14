@@ -17,7 +17,6 @@ body {
 }
 
 .star {
-  /* --star-color: var(--primary-color); */
   --star-tail-length: 8em;
   --star-tail-height: 4px;
   --star-width: calc(var(--star-tail-length) / 6);
