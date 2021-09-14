@@ -101,6 +101,8 @@ function prevTrack() {
   indexNum--
   indexNum < 1 ? indexNum = songList.length : indexNum = indexNum
   loadSong(indexNum)
+  playBtn.className = "hidden"
+  pauseBtn.className = "pause"
   songPlayinng()
 }
 
