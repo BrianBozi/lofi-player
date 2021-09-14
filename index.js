@@ -4,23 +4,35 @@ const prevBtn = document.querySelector(".previous")
 const pauseBtn = document.querySelector(".pause")
 const albumArt = document.querySelector(".albumArt")
 const song = document.querySelector(".songs")
+const songName = document.querySelector(".song-name")
+const artist = document.querySelector(".artist")
 
 const songList = [
   {
     song: "Lofi Mando",
-    img: "./music/img/mando-lofi.jpeg",
-    src: "./music/songs/lofi-mando.mp3"
+    artist: "Closed on Sunday",
+    img: "mando-lofi.jpeg",
+    src: "lofi-mando.mp3"
   },
   {
-    song: "color-lofi",
-    img: "./music/img/colors-minial.jpeg",
-    src: "./music/songs/colors-lofi.mp3"
+    song: "Colors lofi",
+    artist: "eirascheper",
+    img: "colors-minial.jpeg",
+    src: "colors-lofi.mp3"
   },
   {
     song: "Rude",
-    img: "./music/img/rude.jpeg",
-    src: "./music/songs/Rude.mp3"
+    artist: "Eternal Youth",
+    img: "rude.jpeg",
+    src: "Rude.mp3"
+  },
+  {
+    song: "Before you go",
+    artist: "jhove",
+    img: "before-you-go.jpeg",
+    src: "before-you-go.mp3"
   }
+
 ]
 
 let indexNum = 1
@@ -30,11 +42,13 @@ window.addEventListener('load', () => {
 })
 
 function loadSong (indexNum){
-  albumArt.src = `${songList[indexNum - 1].img}`
+  albumArt.src = `./music/img/${songList[indexNum - 1].img}`
 }
 
 function songPlayinng (){
-  song.src = `${songList[indexNum - 1].src}`
+  song.src = `./music/songs/${songList[indexNum - 1].src}`
+  songName.innerText = `${songList[indexNum - 1].song}`
+  artist.innerText = `${songList[indexNum - 1].artist}`
   song.play()
 }
 
@@ -73,4 +87,8 @@ function prevTrack() {
 prevBtn.addEventListener("click", () => {
   console.log("next btn")
   prevTrack()
+})
+
+song.addEventListener("ended", function( ){
+  nextTrack()
 })
