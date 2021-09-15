@@ -49,7 +49,20 @@ const songList = [
     artist: "Cozy",
     img: "koh2.jpeg",
     src: "koh2.mp3"
+  },
+  {
+    song: "Cartoons",
+    artist: "demon gummies",
+    img: "cartoon.jpeg",
+    src: "cartoon.mp3"
+  },
+  {
+    song: "JOJO",
+    artist: "RufflesVA",
+    img: "jojo.jpeg",
+    src: "jojo.mp3"
   }
+
 
 ]
 
