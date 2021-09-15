@@ -51,12 +51,6 @@ const songList = [
     src: "koh2.mp3"
   },
   {
-    song: "Cartoons",
-    artist: "demon gummies",
-    img: "cartoon.jpeg",
-    src: "cartoon.mp3"
-  },
-  {
     song: "JOJO",
     artist: "RufflesVA",
     img: "jojo.jpeg",
